@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    padding: 30px;
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* Updated color to match sections */
     background-color: #0072bb;
@@ -25,12 +25,11 @@ body {
    font-size: 17px;
    /* Changed width from 300px to 250px */
    width: 250px;
-    
   }
   
   /* Added hover color */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
     color: black;
   }
 
@@ -55,15 +54,9 @@ body {
 ul {
     display: block;
     list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 30px;
-}
-
-.header div ul {
-    list-style-type: none;
+    /* Added position and bottom */
+    position: relative;
+    bottom: 30px;
 }
 
 .header div ul li {
@@ -170,7 +163,8 @@ p {
 
 .search-engine-optimization {
     margin-bottom: 20px;
-    padding: 50px;
+    /* Changed padding from 50px to 40px */
+    padding: 40px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -179,7 +173,8 @@ p {
 
 .online-reputation-management {
     margin-bottom: 20px;
-    padding: 50px;
+    /* Changed padding from 50px to 40px */
+    padding: 40px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -188,7 +183,8 @@ p {
 
 .social-media-marketing {
     margin-bottom: 20px;
-    padding: 50px;
+    /* Changed padding from 50px to 40px */
+    padding: 40px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
