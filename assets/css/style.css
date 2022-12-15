@@ -62,8 +62,6 @@ ul {
 .header div ul li {
     display: block;
     margin-left: 25px;
-    /* Added position fixed */
-    position: fixed;
 }
 
 a {
