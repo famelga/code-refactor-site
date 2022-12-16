@@ -49,8 +49,9 @@ a {
     text-decoration: none;
 }
 
+/* Change font size from 16px to 20px */
 p {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .hero {
