@@ -16,99 +16,125 @@ The client Horiseon, is looking to update their website to be more accessible.
 
 A screen reader is a common accessability tool used when searching the web. Having clearly marked tags allows for screen readers to more accurately identify the information that is on the page for the person using the tool. For this reason, I have replaced each div tag in the html file with the corresponding semantic element, which give meaning to the tags. 
 
-Another html feature that can impact accessibility is the use of image alternative texts (img alt texts). The addition of img alt texts provide a description of pictures, icons, figures, etc. that may not properly load. The descriptions provide the website visitor with an understanding of what the missing image would be displaying. Additionally, visitors who are using screen readers would have that description read to them.
+Another html feature that can impact accessibility is the use of alternative texts (alt texts). The addition of alt texts provide a description of images, pictures, icons, figures, etc. that may not properly load. The descriptions provide the website visitor with an understanding of what the missing image would be displaying. Additionally, visitors who are using screen readers would have that description read to them.
 
-At a minimum, your project README needs a title and a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") What problem does it solve? What did you learn? What makes your project stand out? 
+The style.css document did consist almost entirely of id and class selectors. For this reason, the tag changes from html did not have real impact on the formatting of css. However, the were many repetitive ids and classes. These repeating selectors were consolidated, which required class renaming in both html and css.
 
-Lastly, if your project is deployed, include a link to the deployed application https://famelga.github.io/code-refactor-site/.
+https://famelga.github.io/code-refactor-site/
 
-If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
+https://www.canva.com/design/DAFU47SVYTw/ANH6Kjx7ZrNfmk6TIH1THA/watch?utm_content=DAFU47SVYTw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
-
-
-![Site Langing Page](./site.gif)
-
-
-## Table of Contents (Optional)
-
-If your README is very long, add a table of contents to make it easy for users to find what they need.
-
-* [Code Refactor Example](#code-refactor-example)
-* [Usage](#usage)
-* [Learning Points](#learning-points)
-* [Author Info](#author-info)
-* [Credits](#credits)
-* [License](#license)
+<img scr="Untitled design.gif">
 
 
 ## Code Refactor Example
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Below is the original html code with repeating div tags for different content and no alt text.
 
 
 ```html
-<div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
+  <div class="benefits">
+        <div class="benefit-lead">
+            <h3>Lead Generation</h3>
+            <img src="./assets/images/lead-generation.png" />
+            <p>
+                Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
+            </p>
         </div>
-    </div>
+        <div class="benefit-brand">
 ```
 
-Converting the above non-semantic div with the class of 'header' to an appropriate [<header> semantic element](https://www.w3schools.com/html/html5_semantic_elements.asp). 
+The div tags were converted to semantic element tags to provide greater accessibility. Image alt text was also added. Section class benefits were also changed to be uniform.
 
 ```html
-<header>
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Changed opening and closing div tags to aside -->
+    <aside class="benefits">
+           <!-- Changed opening and closing div tags to section -->
+           <!-- Changed class title to benefit -->
+        <section class="benefit">
+            <h3>Lead Generation</h3>
+            <!-- Added image alt text -->
+            <img src="./assets/images/lead-generation.png" alt="Widget wheel funneling into coins." />
+            <p>
+                Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
+            </p>
+        </section>
+           <!-- Changed opening and closing div tags to section -->
+           <!-- Changed class title to benefit -->
+        <section class="benefit">
 
 ```
 
-This change require some additional modification to the CSS selector: 
+These changes require some additional modification to the CSS selector.  
 
 ```css
-.header {
+.benefits {
+    margin-right: 20px;
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+.benefit-lead {
+    margin-bottom: 32px;
     color: #ffffff;
+}
+
+.benefit-brand {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-lead h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-brand h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
 }
 ```
 
 No longer targeting the element on the page with the class of 'header' but instead the css selector targeting the 'header' element 
 
 ```css
-header {
+.benefits {
+    margin-right: 20px;
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+/* Consolidated three sections to use the same class */
+.benefit {
+    margin-bottom: 32px;
     color: #ffffff;
 }
 
+/* Consolidated three sections to use the same class */
+.benefit h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
 ```
 
 ## Usage 
