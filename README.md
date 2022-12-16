@@ -10,21 +10,20 @@
 
 ## Description 
 
-https://famelga.github.io/code-refactor-site/
+[Visit the Deployed Site](https://famelga.github.io/code-refactor-site/)
 
 The client Horiseon, is looking to update their website to be more accessible. 
 
-A screen reader is a common accessability tool used when searching the web. Having clearly marked tags allows for screen readers to more accurately identify the information that is on the page for the person using the tool. For this reason, I have replaced each div tag in the html file with the corresponding semantic element, which give meaning to the tags. 
+A screen reader is a common accessability tool used when searching the web. Having clearly marked tags allows for screen readers to more accurately identify the information that is on the page for the person using the tool. For this reason, I have replaced each div tag in the html file with the corresponding semantic element, which give meaning to the tags. To make the website visually accessible and readable, I increased the font size from 16px to 20px for the paragraphs.
 
 Another html feature that can impact accessibility is the use of alternative texts (alt texts). The addition of alt texts provide a description of images, pictures, icons, figures, etc. that may not properly load. The descriptions provide the website visitor with an understanding of what the missing image would be displaying. Additionally, visitors who are using screen readers would have that description read to them.
 
 The style.css document did consist almost entirely of id and class selectors. For this reason, the tag changes from html did not have real impact on the formatting of css. However, the were many repetitive ids and classes. These repeating selectors were consolidated, which required class renaming in both html and css.
 
-https://famelga.github.io/code-refactor-site/
+[Deployed site](https://famelga.github.io/code-refactor-site/
+)
 
-https://www.canva.com/design/DAFU47SVYTw/ANH6Kjx7ZrNfmk6TIH1THA/watch?utm_content=DAFU47SVYTw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
-<img scr="Untitled design.gif">
+![Horiseon landing page](assets/images/Untitled%20design.gif)
 
 
 ## Code Refactor Example
@@ -65,7 +64,7 @@ The div tags were converted to semantic element tags to provide greater accessib
 
 ```
 
-These changes require some additional modification to the CSS selector.  
+These changes require some additional modification to the CSS selector. Varying class selectors has the same properties, which does not provide the style.css with clean formatting.
 
 ```css
 .benefits {
@@ -110,7 +109,7 @@ These changes require some additional modification to the CSS selector.
 }
 ```
 
-No longer targeting the element on the page with the class of 'header' but instead the css selector targeting the 'header' element 
+The below css with uniform class selectors is more concise while containing the same information.  
 
 ```css
 .benefits {
@@ -139,49 +138,34 @@ No longer targeting the element on the page with the class of 'header' but inste
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+Visit website. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-```md
-![alt text](assets/images/screenshot.png)
-```
+![Horiseon Landing Page](assets/images/Horiseon.jpg)
 
 
 ## Learning Points 
 
 
-This is a good place to Explain what you Learned by creating this application.
-This is a great way to remind about all of the Complex Skills you now have.
-If the user is less experienced than you:
-They will be impressed by what you can do!
+In the process of updating this website, I learned about the importance of accessibility, specificity, and consolidation.
 
-If the user is more experienced than you:
-They will be impressed by what you can do!
+Learning about the visual and auditory components that are required to consider to make a website accessible required for me to use semantic elements, alt text, and increased font size. Researching and implementing the appropriate semantic elements taught me the proper tags for each portion of the webpage layout. I also learned the different between images that require alt text rather than null alt text. 
 
-Remember, it is easy to forget exactly how Valuable and Impressive your skills are, as well as How Much You’ve Learned!
-So quantify that here!
+Recognizing repeated patterns in html and css allowed for me to have neater formatting without duplication. Additionally, this emphaiszed the relavance of id and class selectors.
 
 
 ## Author Info
 
-### Fayven Amelga 
+#### Fayven Amelga 
 
 
-* [Portfolio](https://youtu.be/bHX54GCrDB4)
-* [LinkedIn](https://youtu.be/bHX54GCrDB4)
-* [Github](https://youtu.be/bHX54GCrDB4)
+* [LinkedIn](https://www.linkedin.com/in/fayven-amelga-b09b17b6/)
+* [Github](https://github.com/famelga/code-refactor-site)
 
 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
+Fayven Amelga
 
 ## License
 
